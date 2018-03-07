@@ -1,6 +1,6 @@
 {
   "name": "jest-json-reporter2",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "a reporter for jest that saves test results to json file",
   "main": "index.js",
   "repository": "git@github.com:vernak2539/jest-json-reporter2.git",
@@ -10,6 +10,7 @@
     "lint": "./node_modules/.bin/eslint **/*.js",
     "test": "yarn run lint && ./node_modules/.bin/jest"
   },
+  "engineStrict": true,
   "engines": {
     "node": ">=6.0.0"
   },
@@ -17,10 +18,6 @@
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "babel-core": "^7.0.0-0",
-    "babel-jest": "^22.4.1",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
@@ -28,7 +25,6 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^22.4.2",
-    "regenerator-runtime": "^0.11.1"
+    "jest": "^22.4.2"
   }
 }
