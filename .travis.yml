@@ -1,7 +1,15 @@
 language: node_js
 node_js:
-  - "6"
-  - "7"
-  - "8"
-  - "stable"
+- '6'
+- '7'
+- '8'
+- stable
 sudo: false
+deploy:
+  provider: npm
+  email: alvernacchia@gmail.com
+  api_key:
+    secure: p+VG+v/EIei8NqSRKWyfTzAGUAukW7mBXrmWX2m2SFNCCVWEEF+AsTpqEkRlpYcVOpnXw0uevrwUDG4zfakdCZ9drxZQPyXcR4H0mWQ7gjNBTYoYOkHMltZ772yrTWUF51Hx+1eSEb3fOEnSX+zZUgKwgI4i4SUdrV5Grs3IXh5bFtpZS5ZgTMMW5kGKMOvr1PS9CI7v/koAXnfV4V8hyFavRkJANBZikXm4JLTPlYVQjVIahT4l0Wpn98AjWYwsP8zh+tZF/MvULNT23nj3HbNpNezgx+bi3c8iYJ65erGtw2HQXl6EzVPfmuEZBjsYwRNcAC06zWOP2MiabZCTWJg26AniVdOYMMRJXcYmcGSmqbHZBxToZ9BDkjlvoTCo3R0cBVBnKSt/dLd+I9yIUxWbB/2q1JZxMpjrHQ1Oathi75RhnU7b906HPbtYMABHFbKnFVZ2jE/b30FjL0vKntlns/vO2BmJpyWHced+HCYcY6stC1MIxevPbidYhXvEOqMt/9bIWZoz5dxVGiVtVQmiW96NXPoIbH4UqBG90JjXBdjFr2mUkxzhVv7sUZxqvM7IzDTUS6Ab1jz776eObMcEIMpsY/5sso9b9gIRJ68T6pRjWulpqSJ2VWJG7VeazfQqJpf/m7SrlZYMH7sd7wl/wibMy6cFr3N6qzdRZPU=
+  on:
+    tags: true
+    branch: master
