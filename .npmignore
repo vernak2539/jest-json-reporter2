@@ -1,0 +1,9 @@
+coverage
+jest
+report-results.js
+*.log
+__tests__
+.*
+*.tar.gz
+*.tgz
+*.config*
