@@ -1,6 +1,6 @@
-import Reporter from '../index';
-import mkdirp from 'mkdirp';
-import fs from 'fs';
+const Reporter = require('../index');
+const mkdirp = require('mkdirp');
+const fs = require('fs');
 
 jest.mock('mkdirp', () => {
   return jest.fn((file, cb) => cb());
