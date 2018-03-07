@@ -3,10 +3,10 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 
 module.exports = class JsonReporter {
-  constructor(globalConfig, options) {
+  constructor (globalConfig, options) {
     this._options = options;
   }
-  onRunComplete(contexts, results) {
+  onRunComplete (contexts, results) {
     const { outputDir = './coverage', outputFile = 'test-results.json', fullOutput = false } = this._options;
 
     mkdirp(outputDir, err => {
