@@ -1,6 +1,6 @@
 {
   "name": "jest-json-reporter2",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "a reporter for jest that saves test results to json file",
   "main": "index.js",
   "repository": "git@github.com:vernak2539/jest-json-reporter2.git",
@@ -10,6 +10,7 @@
     "lint": "./node_modules/.bin/eslint **/*.js",
     "test": "yarn run lint && ./node_modules/.bin/jest"
   },
+  "engineStrict": true,
   "engines": {
     "node": ">=6.0.0"
   },
