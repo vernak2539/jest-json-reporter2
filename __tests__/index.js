@@ -3,7 +3,9 @@ const mkdirp = require('mkdirp');
 const fs = require('fs');
 
 jest.mock('mkdirp', () => {
-  return jest.fn((file, cb) => cb());
+  return {
+    sync: jest.fn()
+  };
 });
 fs.writeFileSync = jest.fn();
 
@@ -17,7 +19,7 @@ const sampleResults = {
 };
 
 afterEach(() => {
-  mkdirp.mockClear();
+  mkdirp.sync.mockClear();
   fs.writeFileSync.mockClear();
 });
 
@@ -37,7 +39,7 @@ test('it should try to create requested output directory', () => {
   const reporter = new Reporter({}, sampleOptions);
   reporter.onRunComplete({}, sampleResults);
 
-  expect(mkdirp).toBeCalledWith(sampleOptions.outputDir, expect.any(Function));
+  expect(mkdirp.sync).toBeCalledWith(sampleOptions.outputDir);
 });
 
 test('it should try to create file in requested output directory', () => {
