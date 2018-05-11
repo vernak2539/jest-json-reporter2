@@ -15,7 +15,8 @@ const sampleResults = {
   numPassedTests: 2,
   numFailedTestSuites: 0,
   numPendingTestSuites: 1,
-  numPassedTestSuites: 2
+  numPassedTestSuites: 2,
+  startTime: 1520435906852
 };
 
 afterEach(() => {
@@ -73,7 +74,8 @@ test('it should be save file with the right data', () => {
       failed: sampleResults.numFailedTestSuites,
       skipped: sampleResults.numPendingTestSuites,
       success: sampleResults.numPassedTestSuites
-    }
+    },
+    startTime: sampleResults.startTime
   };
 
   const reporter = new Reporter({}, sampleOptions);
