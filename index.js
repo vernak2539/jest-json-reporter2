@@ -21,7 +21,8 @@ module.exports = class JsonReporter {
         failed: results.numFailedTestSuites,
         skipped: results.numPendingTestSuites,
         success: results.numPassedTestSuites
-      }
+      },
+      startTime: results.startTime
     };
 
     const dataToWrite = fullOutput ? results : generalData;
