@@ -50,7 +50,8 @@ above to see how to flip between outputs.
     "failed": 0,
     "skipped": 1,
     "success": 2
-  }
+  },
+  "startTime": 1520435906852,
 }
 ```
 
