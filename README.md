@@ -1,5 +1,7 @@
 # Jest JSON Reporter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vernak2539/jest-json-reporter2.svg)](https://greenkeeper.io/)
+
 A reporter for jest that saves test results to JSON file.
 
 ## Installation
