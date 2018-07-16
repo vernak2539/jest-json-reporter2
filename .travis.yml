@@ -1,15 +1,15 @@
 language: node_js
 node_js:
 - '6'
-- '7'
+- '4'
 - '8'
 - stable
 sudo: false
-deploy:
-  provider: npm
-  email: avernacc+gravatar@gmail.com
-  api_key:
-    secure: NzOXERlL/BgM5/KoIPqiCMbIElUrda++xFWVL4aphdyzroclQJUCMc3FbTc8lXeIvsS7S5CY0zvE+UHSFmwzPZKvR02Ius5xVj5isJb63d2NwH9ACNrM103Wyig2QwsPr0egcTQmkZqlKVdZKKs87kJbKb3sQ0wEdCyCyM3x7CXPOZsCFuq5jQ2R59oCwwLhyW+y6PfYrGZWIBDJB/1MDQCYz2ZSAONRGBhjczt3Fvyf+KnN9zcYXa4+sWF/HRfdmsVcJMHwstpXBf9x/aN0eVWPij/xtZM7Msm4kVchC7AWUqn1Y6bWfABAk6z0P1WClMsz3ZnspP3mFn/+uGAFCRWI4TayF6Q4elIHgrEYGpoVNCmw//Wj594NKLa10fVCcP8bSsCDJb+ay0WDcEjIzxNezcjQrJBwhTx/LOXWYLRnJ2iw7POq5rjMS0oSvuiQm90uMqCazzVhLRA0/QNp0+6mrgjCXagOou0jKSRvTiqVRdMVt04XaR85PM2Fxi7fRR7n8B83dHJ/+Ah7+BCur+BbAdBK4326aFugO87kYx3skNlizVhOIIrehPM2dV89qe9+ykpsG8empl0QAZPkdf3PdExD402C7jM+cN71KbCsap5cHCkg3A1dDxZ2FBLN+c3N0tv/hvaFlT9nCDyXvOR08T8yERXbbv0DWo7VHiY=
-  on:
-    tags: true
-    branch: master
+before_install:
+- export PATH=$PATH:`yarn global bin`
+- yarn global add greenkeeper-lockfile@1
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
+env:
+  global:
+    secure: fs8/U70hWm8Rik15wrfC4BUkJcL8Dwm63SzxlHdSrJw6D9emjEjwAZa4s35ykK5M6rbOs3Y6Y3K6LSEQE+8MLV9XxkR087Syg3zADj3dfoEvxQVX4OiNoQ+ababbVEuxSCGVlMGv9vKH89ApI0RU0sAXCKZbW4CBmgBY2ZQLwUNySiC7dlmi0trnr3EFLOtl5Pv/Mlh9suv90MKWgMNhARRdgYkyb0zsMSS16ZbRAWL629cqwW3VwLUM1UWRZx3UDU7p9eNcyamefU/aae2eZju4WOicUOnqUS6SKWXpgDsrY/6Cx/2vN9+W+1P8ACn4btv+l2+xu5Q0LFPAkyjHl+YPRNC1Bvd2u3ncF1ZLjMoN0zd7QpYOyO8cR3ndW2GhAc/ofr+WkCfJLdQnP4CGUypGoGyhKWC42sZopY4ciTzeCz4pJy6I0/ECUdHFdnGKGFHh2O2Oj7k2uoFflXnEWRuTgm+Hb85ttlFHP7mbE0Ftnzx0lPtQiCXhnTU+jwFfAOPrJPMuwmrFLeoGiUb3sh9WwvZKN88EJB28StYs30hhr66/Y4bpe1HunUqd4PrbDAxHEsz/VoBRiHVWK3TLvcYexKWjAEaKCfq7ZR97JtH38ARZbHtphP2yBxiLNkK2paAPUarIKzb31K5FDSBUtZ3LIokSVDRgTzcVvPYmMsA=
