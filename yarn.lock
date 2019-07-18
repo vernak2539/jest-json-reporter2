@@ -776,9 +776,9 @@ eslint-plugin-import@^2.9.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-jest@^21.13.0:
-  version "21.13.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.13.0.tgz#9fc903158d79e953aefd861a55e8a8c9f6ab3d36"
+eslint-plugin-jest@^22.11.1:
+  version "22.11.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.11.1.tgz#04b586e2fddd07e55900a381255d6b3d9242ae87"
 
 eslint-plugin-node@^6.0.1:
   version "6.0.1"
