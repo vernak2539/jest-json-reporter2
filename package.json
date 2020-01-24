@@ -15,7 +15,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^4.18.2",
