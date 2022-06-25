@@ -14,13 +14,13 @@ yarn add --dev jest-json-reporter2
 
 Add the following config to your `jest.config.js` or the Jest configuration in the `package.json`.
 
-```js
+```javascript
 // default options
 const jsonreporter2Options = {
-  outputDir = './coverage', // what directory to output to
-  outputFile = 'test-results.json',  // what to call the file
-  fullOutput = false // to output the full results from Jest or consolidated results
-}
+  outputDir: './coverage', // what directory to output to
+  outputFile: 'test-results.json',  // what to call the file
+  fullOutput: false // to output the full results from Jest or consolidated results
+};
 
 module.exports = {
   rootDir: process.cwd(),
